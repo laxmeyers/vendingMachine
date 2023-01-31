@@ -21,7 +21,6 @@ export function saveState(key, value) {
 
 export function loadState(key, instanceType) {
   try {
-    debugger
     const keyName = `${APP_NAME}_${key}`
     const keyType = Array.isArray(instanceType) ? '[]' : '{}'
     instanceType = Array.isArray(instanceType) ? instanceType[0] : instanceType
