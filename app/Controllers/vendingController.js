@@ -24,6 +24,7 @@ export class VendingController{
 
     addToCart(name){
         vendingService.addToCart(name)
+        // console.log(name);
     }
 
 
