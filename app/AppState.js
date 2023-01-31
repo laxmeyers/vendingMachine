@@ -32,8 +32,8 @@ class AppState extends EventEmitter {
   ]
 
 /** @type {Number} */
-  // money = loadState('myMoney', {Number})
-  money = 0
+  money = loadState('myMoney', Number)
+  // money = 0
 }
 
 
