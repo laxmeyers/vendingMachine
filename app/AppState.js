@@ -33,6 +33,8 @@ class AppState extends EventEmitter {
 
 // /** @type {import('./Models/vendingModel').VendingMachine[]} */
   myProducts = loadState('myProducts', [VendingMachine])
+/** @type {Number} */
+  money = 0
 }
 
 

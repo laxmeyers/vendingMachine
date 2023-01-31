@@ -16,6 +16,10 @@ function _drawProducts(){
     setHTML("product", template)
 }
 
+function _drawMoney(){
+    
+}
+
 export class VendingController{
     constructor(){
         // console.log("controller vending")
