@@ -17,18 +17,26 @@ function _drawProducts(){
 }
 
 function _drawMoney(){
-    
+    let money = appState.money
+
+    setText('total-money', `$${money.toFixed(2)}`)
 }
 
 export class VendingController{
     constructor(){
         // console.log("controller vending")
         _drawProducts()
+        _drawMoney()
+        appState.on('money', _drawMoney)
     }
 
-    addToCart(name){
-        vendingService.addToCart(name)
+    buy(name){
+        vendingService.buy(name)
         // console.log(name);
+    }
+
+    addQuarter(){
+        vendingService.addQuarter()
     }
 
 

@@ -18,7 +18,7 @@ export class VendingMachine {
             <h6 class="card-title">${this.name.toUpperCase()}</h6>
             <p class="card-text">$${this.price.toFixed(2)}</p>
           </div>
-          <button class="btn btn-primary" onclick="app.vendingController.addToCart('${this.name}')">Add To Cart</button>
+          <button class="btn btn-primary" onclick="app.vendingController.buy('${this.name}')">Add To Cart</button>
         </div>
       </div>
       `

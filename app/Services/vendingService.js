@@ -1,14 +1,23 @@
 import { appState } from "../AppState.js"
-import { saveState } from "../Utils/Store.js"
+import { Pop } from "../Utils/Pop.js";
+import { saveState } from "../Utils/Store.js";
 
 
 class VendingService{
-    addToCart(name) {
-        let product = appState.products.find(p => p.name == name)
-        appState.myProducts.push(product)
-        console.log(appState.myProducts);
+    addQuarter() {
+        appState.money += 5
 
-        saveState('myProducts', appState.myProducts)
+        saveState('myMoney', appState.money)
+    }
+    buy(name) {
+        let product = appState.products.find(p => p.name == name)
+        if(appState.money > product?.price){
+            appState.money -= product?.price
+            saveState('myMoney', appState.money)
+        }else{
+            console.log(name);
+            Pop.toast("Not enough money", "warning", "top-end")
+        }
 
     }
     constructor(){
