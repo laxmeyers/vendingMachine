@@ -19,7 +19,7 @@ function _drawProducts(){
 function _drawMoney(){
     let money = appState.money
 
-    setText('total-money', `$${money}`)
+    setText('total-money', `$${money.toFixed(2)}`)
 }
 
 export class VendingController{
